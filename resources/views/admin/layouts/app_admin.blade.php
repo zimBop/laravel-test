@@ -36,9 +36,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item"><a class="nav-link" href="#" >Главная</a></li>
-                      <li class="nav-item"><a class="nav-link" href="{{route('admin.news.index')}}" >Новости</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#" >Галерея</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">@lang('admin.home')</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{route('admin.news.index')}}">@lang('admin.news')</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">@lang('admin.gallery')</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -1,30 +1,30 @@
-<label for="">Статус</label>
+<label for="">@lang('news.status')</label>
 <select class="form-control mb-4" name="published">
     @if (isset($news->id))
-        <option value="0" @if ($news->published == 0) selected="" @endif>Не опубликовано</option>
-        <option value="1" @if ($news->published == 1) selected="" @endif>Опубликовано</option>
+        <option value="0" @if ($news->published == 0) selected="" @endif>@lang('news.not_published')</option>
+        <option value="1" @if ($news->published == 1) selected="" @endif>@lang('news.published')</option>
     @else
-        <option value="0">Не опубликовано</option>
-        <option value="1">Опубликовано</option>
+        <option value="0">@lang('news.not_published')</option>
+        <option value="1">@lang('news.published')</option>
     @endif
 </select>
 
-<label for="">Заголовок новости</label>
+<label for="">@lang('news.title')</label>
 <input type="text" class="form-control  mb-4" name="title" 
-       placeholder="Заголовок новости" value="{{$news->title ?? ""}}" required>
+       placeholder="@lang('news.title')" value="{{$news->title ?? ""}}" required>
 
-<label for="">Текст новости</label>
+<label for="">@lang('news.text')</label>
 <textarea type="text" class="form-control  mb-4" name="text" 
-          placeholder="Текст новости" required>{{$news->text ?? ""}}</textarea>
+          placeholder="@lang('news.text')" required>{{$news->text ?? ""}}</textarea>
 <hr />
 
-<label for="">Мета описание</label>
+<label for="">@lang('news.meta_descr')</label>
 <input type="text" class="form-control  mb-4" name="meta_description" 
-       placeholder="Мета описание" value="{{$news->meta_description ?? ""}}">
+       placeholder="@lang('news.meta_descr')" value="{{$news->meta_description ?? ""}}">
 
-<label for="">Ключевые слова</label>
+<label for="">@lang('news.keywords')</label>
 <input type="text" class="form-control  mb-4" name="meta_keywords" 
-       placeholder="Ключевые слова, через запятую" value="{{$news->meta_keywords ?? ""}}">
+       placeholder="@lang('news.meta_keywords')" value="{{$news->meta_keywords ?? ""}}">
 <hr />
 
-<input class="btn btn-primary" type="submit" value="Сохранить">
+<input class="btn btn-primary" type="submit" value="@lang('news.save')">

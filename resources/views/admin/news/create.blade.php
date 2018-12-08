@@ -5,7 +5,7 @@
 <div class="container">
 
 
-    <h4 class="">Добавить новость</h4>
+    <h4 class="">@lang('news.add')</h4>
     <hr />
 
     <form class="form-horizontal" action="{{route('admin.news.store')}}" method="post">

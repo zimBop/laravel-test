@@ -6,31 +6,31 @@
     
 </div>
 
-<a href="{{route('admin.news.create')}}" class="btn btn-primary pull-right mb-4">Добавить новость</a>
+<a href="{{route('admin.news.create')}}" class="btn btn-primary pull-right mb-4 mr-4">@lang('news.add')</a>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Заголовок новости</th>
-            <th>Статус</th>
-            <th>Действия</th>
+            <th>@lang('news.title')</th>
+            <th>@lang('news.status')</th>
+            <th>@lang('news.actions')</th>
         </tr>
     </thead>
     <tbody>
         @forelse ($news as $item)
             <tr>
                 <td>{{$item->title}}</td>
-                <td>{{$item->published ? 'Опубликовано' : 'Неопубликовано'}}</td>
+                <td>{{$item->published ? __('news.published') : __('news.not_published')}}</td>
                 <td>
                     <form action="{{route('admin.news.destroy', $item)}}" method="post"
-                          onsubmit="if(confirm('Вы действительно хотите удалить новость?')){ return true; }else{ return false; }">
+                          onsubmit="if(confirm('{{ __('news.delete_confirm')}}')){ return true; }else{ return false; }">
                         <input type="hidden" name="_method" value="DELETE">
                         {{ csrf_field() }}
 
-                        <a href="{{route('admin.news.edit', ['id' => $item->id])}}" class="btn btn-primary" title="Редактировать">
+                        <a href="{{route('admin.news.edit', ['id' => $item->id])}}" class="btn btn-primary" title="@lang('news.edit')">
                             <i class="fa fa-edit"></i>
                         </a>
                         
-                        <button type="submit" class="btn btn-primary" title="Удалить">
+                        <button type="submit" class="btn btn-primary" title="@lang('news.delete')">
                             <i class="fa fa-trash"></i>
                         </button>
                     </form>
@@ -38,7 +38,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="3" class="text-center">Новости еще не добавлены.</td>
+                <td colspan="3" class="text-center">@lang('news.no_news')</td>
             </tr>
         @endforelse
     </tbody>

@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                Всего новостей:
+                @lang('admin.news_count', ['news_count' => $news_count])
             </div>
             <div class="col-sm">
-                Всего изображений в галерее:
+                @lang('admin.images_count', ['image_count' => $image_count])
             </div>
         </div>
     </div>
