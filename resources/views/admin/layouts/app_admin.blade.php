@@ -15,7 +15,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -34,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item"><a class="nav-link" href="#" >Главная</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#" >Новости</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{route('admin.news.index')}}" >Новости</a></li>
                       <li class="nav-item"><a class="nav-link" href="#" >Галерея</a></li>
                     </ul>
 

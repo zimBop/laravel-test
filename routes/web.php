@@ -19,6 +19,7 @@ Route::group(
     ],
     function () {
         Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+        Route::resource('/news', 'NewsController', ['as' => 'admin']);
     }
 );
 
