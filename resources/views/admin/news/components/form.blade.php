@@ -1,3 +1,14 @@
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    <hr />
+@endif
+
 <label for="">@lang('news.status')</label>
 <select class="form-control mb-4" name="published">
     @if (isset($news->id))
