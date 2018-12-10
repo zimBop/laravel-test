@@ -15,6 +15,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -33,7 +37,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@lang('admin.administration')</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="nav-item"><a class="nav-link" href="#">@lang('admin.home')</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('admin.index')}}">@lang('admin.dashboard')</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('admin.news.index')}}">@lang('admin.news')</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">@lang('admin.gallery')</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('news_list')}}">@lang('news.news')</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -6,6 +6,8 @@ return [
     'images_count' => 'Total images in the gallery: :image_count.',
     'home' => 'Home page',
     'news' => 'News',
-    'gallery' => 'Gallery'
+    'gallery' => 'Gallery',
+    'dashboard' => 'Dashboard',
+    'administration' => 'Administration'
 
 ];
