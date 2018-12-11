@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', $news->title)
+@section('meta_keywords', $news->meta_keywords)
+@section('meta_description', $news->meta_description)
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
