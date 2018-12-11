@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Page;
 use App\News;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('home', [
+            'page' => Page::where('name', 'home')->first()
+        ]);
     }
     
     public function newsList()

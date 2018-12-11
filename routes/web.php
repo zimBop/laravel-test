@@ -19,6 +19,8 @@ Route::group(
     ],
     function () {
         Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+        Route::get('/home_page', 'HomePageController@edit')->name('admin.home_page');
+        Route::post('/home_page', 'HomePageController@store')->name('admin.home_page_store');
         Route::resource('/news', 'NewsController', ['as' => 'admin']);
     }
 );

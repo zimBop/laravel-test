@@ -41,7 +41,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@lang('admin.administration')</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class="nav-item"><a class="nav-link" href="#">@lang('admin.home')</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('admin.home_page')}}">@lang('admin.home')</a></li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.index')}}">@lang('admin.dashboard')</a>
                                 </li>
