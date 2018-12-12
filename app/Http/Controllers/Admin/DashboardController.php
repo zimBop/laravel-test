@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\News;
+use App\Image;
 
 class DashboardController extends Controller
 {
@@ -13,7 +13,7 @@ class DashboardController extends Controller
         return view('admin.dashboard', 
             [
                 'news_count' => News::count(),
-                'image_count' => 0
+                'image_count' => Image::count()
             ]
         );
     }
