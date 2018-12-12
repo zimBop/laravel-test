@@ -22,6 +22,8 @@ Route::group(
         Route::get('/home_page', 'HomePageController@edit')->name('admin.home_page');
         Route::post('/home_page', 'HomePageController@store')->name('admin.home_page_store');
         Route::resource('/news', 'NewsController', ['as' => 'admin']);
+        Route::resource('/gallery', 'GalleryController', ['as' => 'admin'])
+            ->except(['edit', 'show', 'update']);
     }
 );
 

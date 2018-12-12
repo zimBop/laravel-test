@@ -47,10 +47,11 @@
                                     <a class="nav-link" href="{{route('admin.index')}}">@lang('admin.dashboard')</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="{{route('admin.news.index')}}">@lang('admin.news')</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">@lang('admin.gallery')</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('admin.gallery.index')}}">@lang('admin.gallery')</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{route('news_list')}}">@lang('news.news')</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">@lang('admin.gallery')</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
