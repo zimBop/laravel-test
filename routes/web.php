@@ -31,4 +31,5 @@ Auth::routes();
 
 Route::get('/', 'SiteController@index')->name('home');
 Route::get('/news', 'SiteController@newsList')->name('news_list');
+Route::get('/gallery', 'SiteController@gallery')->name('gallery');
 Route::get('/news/{slug}', 'SiteController@news')->name('news');

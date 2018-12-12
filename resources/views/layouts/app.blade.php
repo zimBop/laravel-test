@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{route('news_list')}}">@lang('news.news')</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">@lang('admin.gallery')</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('gallery')}}">@lang('admin.gallery')</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
